@@ -2109,6 +2109,8 @@ export default class ExpressionParser extends LValParser {
         this.state.context.pop();
       }
     } else {
+      console.log(this.state.type); // current token
+      console.log(this.lookahead().type); // next token
       throw this.unexpected();
     }
 
